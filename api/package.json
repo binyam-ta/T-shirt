@@ -1,0 +1,22 @@
+{
+  "name": "backend-api",
+  "version": "1.0.0",
+  "description": "api for the t-shirt e-comerrce ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm test",
+    "dev": "node --import=tsx --watch --env-file=.env src/index.ts",
+    "build": "tsc"
+  },
+  "author": "binyam",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
