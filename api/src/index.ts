@@ -1,5 +1,6 @@
 import express, {json, urlencoded} from 'express';
 import productsRouter from './routes/products/index';
+import authRouter from './routes/auth/index';
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -12,6 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/products', productsRouter);
+app.use('/auth', authRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

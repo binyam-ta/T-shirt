@@ -35,6 +35,7 @@ catch (error) {
 export async function createProduct(req: Request, res: Response) {
 
 try{
+    console.log(req.userId);
     const [product] = await db
     .insert(productsTable)
     .values(req.cleanBody as { 
