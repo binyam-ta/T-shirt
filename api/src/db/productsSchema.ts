@@ -13,7 +13,7 @@ export const productsTable = pgTable("products", {
 export const listProductSchema = createInsertSchema(productsTable);
 export const getProductSchema = createInsertSchema(productsTable);
 export const createProductSchema = createInsertSchema(productsTable).omit({
-   id: true, });
+ });
 export const updateProductSchema = createInsertSchema(productsTable).omit({
-  id: true, }).partial();
+ }).partial();
 export const deleteProductSchema = createInsertSchema(productsTable);

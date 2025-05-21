@@ -17,7 +17,8 @@ export function verifyToken(req: Request, res: Response, next: NextFunction) {
   const token = authHeader?.replace('Bearer ', '');
 
   if (!token) {
-    return res.status(401).json({ message: 'No token provided' });
+    res.status(401).json({ message: 'No token provided' });
+    return ;
   }
 
   try {
@@ -34,7 +35,8 @@ export function verifyToken(req: Request, res: Response, next: NextFunction) {
     next();
   } catch (error) {
     console.error("JWT Error:", error); 
-    return res.status(401).json({ message: 'Access denied' });
+     res.status(401).json({ message: 'Access denied' });
+     return;
   }
 }
 
