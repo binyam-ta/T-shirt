@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-      "module": "ESNext", // Use ESNext for ESM
+      "module": "CommonJS", // Use ESNext for ESM
       "target": "ES2020", // Target modern ECMAScript versions
       "moduleResolution": "node",
       "esModuleInterop": true,
@@ -13,6 +13,7 @@
       "noEmit": false, // Allow emitting output
       "isolatedModules": true, // Required for using ESM modules
       "baseUrl": ".", // Allow absolute imports relative to project root
+      "types": ["node"],
       "paths": {
         "*": ["node_modules/*"]
       }
